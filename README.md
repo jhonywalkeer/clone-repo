@@ -46,7 +46,7 @@ aws_region                 = "PUT YOUR AWS REGION OF CHOICE"
 
 - [ ] Fork this repository;
 - [ ] Create a branch with your feature: `git checkout -b my-feature`;
-- [ ] Commit your changes: `git commit -m 'feat: My new feature'`;
+- [ ] Commit your changes: `git commit -m 'feat: my new feature'`;
 - [ ] Push to your branch: `git push origin my-feature`.
 
 ## License
