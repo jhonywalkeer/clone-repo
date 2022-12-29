@@ -1,6 +1,6 @@
 This Terraform script works in the following situation: we have our private Github organization where the project code is stored and we need to sync it with another repository in AWS CodeCommit. For those unfamiliar with AWS CodeCommit is a highly scalable, secure managed source control service that hosts private Git repositories within the AWS ecosystem.
 
-## How to use
+## Process
 
 - [ ] Create a personal access token on Github (if you don't know how, just [access here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
 - [ ] Clone this repository
@@ -26,28 +26,9 @@ aws_region                 = "PUT YOUR AWS REGION OF CHOICE"
 - [ ] Run the command `terraform apply`
 - [ ] Check the features to be deployed make sense and type "yes" to deploy the features.
 
-## Architecture
-
 <h1 align="center">
-    <img width="80%"  alt="Study" title="S3 Trigger" src="./readme/assets/images/terraform-flow.png" />
+    <img width="100%"  alt="Terraform Script to Clone Github Repository for AWS Code Commit" title="Terraform script execution flow" src="./assets/flow/terraform-flow.png" />
 </h1>
-
-## Technologies
-
-<div align="center">
-
-| Language                               |
-| -------------------------------------- |
-| HCL (HashiCorp Configuration Language) |
-
-</div>
-
-## Contributions
-
-- [ ] Fork this repository;
-- [ ] Create a branch with your feature: `git checkout -b my-feature`;
-- [ ] Commit your changes: `git commit -m 'feat: my new feature'`;
-- [ ] Push to your branch: `git push origin my-feature`.
 
 ## License
 
