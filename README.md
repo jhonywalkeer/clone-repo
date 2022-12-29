@@ -1,5 +1,11 @@
 This Terraform script works in the following situation: we have our private Github organization where the project code is stored and we need to sync it with another repository in AWS CodeCommit. For those unfamiliar with AWS CodeCommit is a highly scalable, secure managed source control service that hosts private Git repositories within the AWS ecosystem.
 
+### Content
+
+- [Contents](#content)
+- [Process and Flowchart](#process)
+- [Problem Solved](#problem)
+
 ## Process
 
 - [ ] Create a personal access token on Github (if you don't know how, just [access here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
@@ -23,12 +29,28 @@ aws_region                 = "PUT YOUR AWS REGION OF CHOICE"
 ```
 
 - [ ] Run the command `terraform init`
-- [ ] Run the command `terraform apply`
+- [ ] Run the command `terraform plan`
+- [ ] Run the command `terraform apply -auto-approve`
 - [ ] Check the features to be deployed make sense and type "yes" to deploy the features.
 
 <h1 align="center">
     <img width="100%"  alt="Terraform Script to Clone Github Repository for AWS Code Commit" title="Terraform script execution flow" src="./assets/flow/terraform-flow.png" />
 </h1>
+
+## Problem Solved
+
+Workflow Failed
+
+```
+> Run pixta-dev/repository-mirroring-action@v1
+> fatal: no path specified; see 'git help pull' for valid url syntax
+```
+
+Resolution:
+
+- Open the created GitHub Repository, Go to Settings > Secrets > Update `CODECOMMIT_SSH_PRIVATE_KEY` with your private SSH key.
+
+- Rerun workflow.
 
 ## License
 
